@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabla de Multiplicar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    // Función para generar la tabla de multiplicar
+    function generarTabla() {
+      // Pedir al usuario que ingrese un número
+      var numero = prompt("Ingrese un número para ver su tabla de multiplicar:");
+
+      // Convertir el número ingresado a entero
+      numero = parseInt(numero);
+
+      // Verificar si el usuario ingresó un número válido
+      if (isNaN(numero)) {
+        alert("Por favor, ingrese un número válido.");
+        return;
+      }
+
+      // Crear la tabla de multiplicar hasta el 10
+      var tabla = "<h2>Tabla de Multiplicar del " + numero + "</h2><ul>";
+      for (var i = 1; i <= 10; i++) {
+        var resultado = numero * i;
+        tabla += "<li>" + numero + " x " + i + " = " + resultado + "</li>";
+      }
+      tabla += "</ul>";
+
+      // Mostrar la tabla en el cuerpo del documento
+      document.body.innerHTML += tabla;
+    }
+
+    // Llamar a la función al cargar la página
+    window.onload = generarTabla;
+  </script>
+
+</body>
+</html>

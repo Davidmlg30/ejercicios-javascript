@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificación de Palabra</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    // Función para verificar la palabra
+    function verificarPalabra() {
+      // Pedir al usuario que escriba la palabra "ok"
+      var palabra = prompt("Por favor, escribe la palabra 'ok':");
+
+      // Convertir la palabra ingresada a minúsculas para hacer la comparación insensible a mayúsculas
+      palabra = palabra.toLowerCase();
+
+      // Verificar si el usuario escribió la palabra correcta
+      if (palabra === "ok") {
+        alert("Continua con el siguiente paso.");
+      } else {
+        alert("Recarga la página e introduce 'ok'.");
+      }
+    }
+
+    // Llamar a la función al cargar la página
+    window.onload = verificarPalabra;
+  </script>
+
+</body>
+</html>
