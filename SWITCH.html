@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué hora es?</title>
+    <script type="text/javascript">
+        var nombre;
+        var fecha = new Date();
+        var hora = fecha.getHours();//obtenemos la hora en un numero entero de 0-23
+        var minutos = fecha.getUTCMinutes();// obtenemos los minutos entre 0-59
+
+        nombre = window.prompt("Introduzca su nombre: ");
+        switch (hora) {
+            case 12:
+                alert(nombre + " ,es mediodia");
+                break;
+            case 19:
+                alert(nombre + " ,es por la tarde");
+                break;
+            default:
+                alert(nombre + " ,es por la noche")
+        }
+        </script>
+        </head>
+        </html>

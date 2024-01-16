@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Enter the Word</h2>
+
+<button onclick="checkWord()">Submit</button>
+
+<p id="message"></p>
+
+<script>
+function checkWord() {
+ let word = prompt("Please enter the word");
+ if (word === "ok") {
+   document.getElementById("message").innerHTML = "Continue with the next step";
+ } else {
+   document.getElementById("message").innerHTML = "Reload the page and enter 'ok'";
+ }
+}
+</script>
+
+</body>
+</html>
